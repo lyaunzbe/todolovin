@@ -9,8 +9,8 @@ var server = restify.createServer();
 
 server.use(restify.bodyParser());
 
-server.get('/todo', routes.todo);
-server.post('/todo', routes.todo);
+server.get('/todo', routes.todoGet);
+server.post('/todo', routes.todoCreate);
 server.del('/todo', routes.rm);
 server.put('/todo', routes.complete)
 
