@@ -1,6 +1,7 @@
-var restify = require('restify')
-	routes  = require('./routes/index.js'),
-	mongoose = require('mongoose');
+var restify = require('restify'),
+	mongoose = require('mongoose')
+	routes  = require('./routes/index.js')(mongoose);
+
 
 mongoose.connect('mongodb://localhost/');
 
